@@ -10,7 +10,7 @@
  *
  * Filename      : secStorCaHandle.c
  * Author        : Shuai Fengyun
- * Mail          : shuai.fengyun@whaley.cn
+ * Mail          : shuaifengyun@126.com
  * Create Time   : Mon 19 Jun 2017 03:50:27 PM CST
  ****************************************************************************************
  */
