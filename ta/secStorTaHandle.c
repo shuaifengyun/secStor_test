@@ -10,7 +10,7 @@
  *
  * Filename      : secStorTaHandle.c
  * Author        : Shuai Fengyun
- * Mail          : shuai.fengyun@126.cn
+ * Mail          : shuaifengyun@126.cn
  * Create Time   : Mon 19 Jun 2017 10:34:50 AM CST
  ****************************************************************************************
  */
@@ -117,7 +117,7 @@ TEE_Result store_data_sample(void)
     uint32_t storageID=TEE_OBJECT_STORAGE_PRIVATE;
     TF("store_data_sample start:============\n");
 
-    /*´´½¨ÓÀ¾ÃObject: flagÎªĞ´²Ù×÷(»á½«initialDataºÍobject infoºÍattributesĞ´ÈëÎïÀí½éÖÊ*/
+    /*åˆ›å»ºæ°¸ä¹…Object: flagä¸ºå†™æ“ä½œ(ä¼šå°†initialDataå’Œobject infoå’Œattributeså†™å…¥ç‰©ç†ä»‹è´¨*/
     ret=TEE_CreatePersistentObject(storageID, create_objectID, strlen(create_objectID),w_flags, TEE_HANDLE_NULL , initialData, (size_t)(strlen((char*)initialData)), (&persistent_data));
     if (TEE_SUCCESS != ret)
     {
@@ -128,7 +128,7 @@ TEE_Result store_data_sample(void)
     TEE_CloseObject(persistent_data);
 
 
-    /*´ò¿ªÒÑ¾­´´½¨µÄÎÄ¼ş£¬½øĞĞinitial dataµÄ¶ÁÈ¡*/
+    /*æ‰“å¼€å·²ç»åˆ›å»ºçš„æ–‡ä»¶ï¼Œè¿›è¡Œinitial dataçš„è¯»å–*/
     ret = TEE_OpenPersistentObject(storageID, create_objectID,strlen(create_objectID), r_flags|TEE_DATA_FLAG_ACCESS_WRITE_META, (&persistent_data));
     if (TEE_SUCCESS != ret)
     {
@@ -137,12 +137,12 @@ TEE_Result store_data_sample(void)
     }
     TF("Succeed to TEE_OpenPersistentObject for persistent_data.\n");
 
-    /*¶ÁÈ¡ÒÑ´æÈëµÄÊı¾İ*/
+    /*è¯»å–å·²å­˜å…¥çš„æ•°æ®*/
     ret = TEE_ReadObjectData(persistent_data,read_buffer,read_test_size, count);
     if(ret == TEE_SUCCESS)
     {
         read_buffer[*count]='\0';
-        /*¶Ô¶Á³öµÄÊı¾İ½øĞĞÅĞ¶Ï£¬±£Ö¤¶Á³öµÄÊı¾İÓë´´½¨ objectÊ±Ğ´ÈëµÄÏàÍ¬*/
+        /*å¯¹è¯»å‡ºçš„æ•°æ®è¿›è¡Œåˆ¤æ–­ï¼Œä¿è¯è¯»å‡ºçš„æ•°æ®ä¸åˆ›å»º objectæ—¶å†™å…¥çš„ç›¸åŒ*/
         if (TEE_MemCompare(read_buffer, initialData, read_test_size))
         {
             TF("read content is %s \n",read_buffer);
@@ -163,7 +163,7 @@ TEE_Result store_data_sample(void)
     }
     TF("Succeed to TEE_ReadObjectData for persistent_data.\n");
 
-    /*É¾³ıÒÑ¾­´´½¨µÄÓÀ¾Ã object,±£Ö¤²»Ó°ÏìºóĞøµÄ²âÊÔÓÃÀı*/
+    /*åˆ é™¤å·²ç»åˆ›å»ºçš„æ°¸ä¹… object,ä¿è¯ä¸å½±å“åç»­çš„æµ‹è¯•ç”¨ä¾‹*/
     //TEE_CloseAndDeletePersistentObject(persistent_data);
     TEE_CloseObject(persistent_data);
 
