@@ -10,7 +10,7 @@
  *
  * Filename      : secStorCaTest.c
  * Author        : Shuai Fengyun
- * Mail          : shuai.fengyun@126.cn
+ * Mail          : shuaifengyun@126.cn
  * Create Time   : Mon 19 Jun 2017 10:33:32 AM CST
  ****************************************************************************************
  */
