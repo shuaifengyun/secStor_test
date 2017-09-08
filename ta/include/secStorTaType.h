@@ -1,14 +1,3 @@
-/****************************************************************************************/
-/*                          COPYRIGHT INFORMATION                                       */
-/*    This program contains proprietary information which is a trade                    */
-/*    secret of whaley Co., Ltd.and also is protected as an   unpublished               */
-/*    work under applicable Copyright laws. Recipient is to retain this                 */
-/*    program in confidence and is not permitted to use or make copies thereof          */
-/*    other than as permitted in a written agreement written agreement with             */
-/*    whaley Co., Ltd.                                                                  */
-/*                                                                                      */
-/*    All rights reserved. whaley Co., Ltd.                                             */
-/****************************************************************************************/
 /*
  ****************************************************************************************
  *
@@ -18,7 +7,7 @@
  * Programmer(s) : system BSP
  * Filename      : secStorTaType.h
  * Author        : Shuai Fengyun
- * Mail          : shuai.fengyun@whaley.cn
+ * Mail          : shuaifengyun@126.com
  * Create Time   : Mon 19 Jun 2017 10:43:47 AM CST
  ****************************************************************************************
  */
