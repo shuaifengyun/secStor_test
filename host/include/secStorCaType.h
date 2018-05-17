@@ -48,8 +48,6 @@
 #define   FAIL     -1            /* Return value when operation fail */
 #define   OK        0            /* Return value when operation OK */
 
-#define false   -1
-#define true     0
 
 
 
@@ -68,7 +66,6 @@ typedef signed int     INT32;    /**< Typedef for 32bits signed integer   */
 typedef char           CHAR;     /**< Typedef for char                    */
 
 
-typedef int bool;
 
 
 
